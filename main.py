@@ -1,11 +1,15 @@
-def count_digits(number):
-    return len(str(number))
+def is_palindrome(number):
+    num_str = str(number)
+    return num_str == num_str[::-1]
 
 user_input = input("Введіть число: ")
 
 try:
     number = int(user_input)
-    digit_count = count_digits(number)
-    print(f"Кількість цифр у числі {number}: {digit_count}")
+    result = is_palindrome(number)
+    if result:
+        print(f"Число {number} є паліндромом.")
+    else:
+        print(f"Число {number} не є паліндромом.")
 except ValueError:
     print("Введене значення не є числом.")
