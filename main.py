@@ -1,15 +1,11 @@
-def calculate_product_in_range(lower, upper):
-    if lower > upper:
-        lower, upper = upper, lower
+def count_digits(number):
+    return len(str(number))
 
-    product = 1
-    for num in range(lower, upper + 1):
-        product *= num
-    return product
+user_input = input("Введіть число: ")
 
-
-lower_limit = int(input("Введіть нижню межу діапазону: "))
-upper_limit = int(input("Введіть верхню межу діапазону: "))
-
-result = calculate_product_in_range(lower_limit, upper_limit)
-print(f"Добуток чисел у діапазоні [{lower_limit}, {upper_limit}]: {result}")
+try:
+    number = int(user_input)
+    digit_count = count_digits(number)
+    print(f"Кількість цифр у числі {number}: {digit_count}")
+except ValueError:
+    print("Введене значення не є числом.")
