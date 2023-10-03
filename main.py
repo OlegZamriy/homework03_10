@@ -1,11 +1,15 @@
-def find_minimum(a, b, c, d, e):
-    return min(a, b, c, d, e)
+def calculate_product_in_range(lower, upper):
+    if lower > upper:
+        lower, upper = upper, lower
 
-num1 = float(input("Введіть перше число: "))
-num2 = float(input("Введіть друге число: "))
-num3 = float(input("Введіть третє число: "))
-num4 = float(input("Введіть четверте число: "))
-num5 = float(input("Введіть п'яте число: "))
+    product = 1
+    for num in range(lower, upper + 1):
+        product *= num
+    return product
 
-min_number = find_minimum(num1, num2, num3, num4, num5)
-print(f"Мінімальне число: {min_number}")
+
+lower_limit = int(input("Введіть нижню межу діапазону: "))
+upper_limit = int(input("Введіть верхню межу діапазону: "))
+
+result = calculate_product_in_range(lower_limit, upper_limit)
+print(f"Добуток чисел у діапазоні [{lower_limit}, {upper_limit}]: {result}")
