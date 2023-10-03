@@ -1,7 +1,9 @@
-def display_quote(author):
-    quote = "Don't compare yourself with anyone in this world…\nif you do so, you are insulting yourself."
-    formatted_quote = f'"{quote}"\n{author}'
-    print(formatted_quote)
+def display_even_numbers(start, end):
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            print(num)
 
-author = "Bill Gates"
-display_quote(author)
+start = int(input("Введіть початкове число: "))
+end = int(input("Введіть кінцеве число: "))
+
+display_even_numbers(start, end)
