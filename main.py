@@ -1,16 +1,11 @@
-def display_square(side_length, fill, filled=True):
-    for i in range(side_length):
-        if filled:
-            row = fill * side_length
-        else:
-            if i == 0 or i == side_length - 1:
-                row = fill * side_length
-            else:
-                row = fill + " " * (side_length - 2) + fill
-        print(row)
+def find_minimum(a, b, c, d, e):
+    return min(a, b, c, d, e)
 
-print("Заповнений квадрат:")
-display_square(5, "$", True)
+num1 = float(input("Введіть перше число: "))
+num2 = float(input("Введіть друге число: "))
+num3 = float(input("Введіть третє число: "))
+num4 = float(input("Введіть четверте число: "))
+num5 = float(input("Введіть п'яте число: "))
 
-print("Порожній квадрат:")
-display_square(5, "$", False)
+min_number = find_minimum(num1, num2, num3, num4, num5)
+print(f"Мінімальне число: {min_number}")
